@@ -1012,49 +1012,17 @@ namespace TrueCrypt
 
 	wxString GraphicUserInterface::GetHomepageLinkURL (const wxString &linkId, bool secure, const wxString &extraVars) const
 	{
-		wxString url = wxString (StringConverter::ToWide (secure ? TC_APPLINK_SECURE : TC_APPLINK)) + L"&dest=" + linkId;
-		wxString os, osVersion, architecture;
-
-#ifdef TC_WINDOWS
-
-		os = L"Windows";
-
-#elif defined (TC_UNIX)
-		struct utsname unameData;
-		if (uname (&unameData) != -1)
-		{
-			os = StringConverter::ToWide (unameData.sysname);
-			osVersion = StringConverter::ToWide (unameData.release);
-			architecture = StringConverter::ToWide (unameData.machine);
-
-			if (os == L"Darwin")
-				os = L"MacOSX";
-		}
-		else
-			os = L"Unknown";
-#else
-		os = L"Unknown";
-#endif
-
-		os.Replace (L" ", L"-");
-		url += L"&os=";
-		url += os;
-
-		osVersion.Replace (L" ", L"-");
-		url += L"&osver=";
-		url += osVersion;
-
-		architecture.Replace (L" ", L"-");
-		url += L"&arch=";
-		url += architecture;
-
-		if (!extraVars.empty())
-		{
-			 url += L"&";
-			 url += extraVars;
-		}
-
-		return url;
+		if (linkId.Cmp(L"help") == 0)
+			return wxString(L"https://www.truecrypt71a.com/documentation/");
+		else if (linkId.Cmp(L"tutorial") == 0)
+			return wxString(L"https://www.truecrypt71a.com/documentation/beginners-tutorial/");
+		else if (linkId.Cmp(L"faq") == 0)
+			return wxString(L"https://www.truecrypt71a.com/faq/");
+		else if (linkId.Cmp(L"downloads") == 0)
+			return wxString(L"https://launchpad.net/~stefansundin/+archive/ubuntu/truecrypt");
+		else if (linkId.Cmp(L"history") == 0)
+			return wxString(L"https://github.com/stefansundin/truecrypt.deb/releases");
+		return wxString(L"https://github.com/stefansundin/truecrypt.deb");
 	}
 
 	void GraphicUserInterface::OpenHomepageLink (wxWindow *parent, const wxString &linkId, const wxString &extraVars)

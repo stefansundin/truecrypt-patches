@@ -168,26 +168,18 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	HelpMenu->AppendSeparator();
 	
 	wxMenuItem* WebsiteMenuItem;
-	WebsiteMenuItem = new wxMenuItem( HelpMenu, wxID_ANY, wxString( _("TrueCrypt Website") ) , wxEmptyString, wxITEM_NORMAL );
+	WebsiteMenuItem = new wxMenuItem( HelpMenu, wxID_ANY, wxString( _("Website") ) , wxEmptyString, wxITEM_NORMAL );
 	HelpMenu->Append( WebsiteMenuItem );
 	
 	wxMenuItem* DownloadsMenuItem;
 	DownloadsMenuItem = new wxMenuItem( HelpMenu, wxID_ANY, wxString( _("Downloads") ) , wxEmptyString, wxITEM_NORMAL );
 	HelpMenu->Append( DownloadsMenuItem );
 	
-	wxMenuItem* NewsMenuItem;
-	NewsMenuItem = new wxMenuItem( HelpMenu, wxID_ANY, wxString( _("News") ) , wxEmptyString, wxITEM_NORMAL );
-	HelpMenu->Append( NewsMenuItem );
-	
 	wxMenuItem* VersionHistoryMenuItem;
 	VersionHistoryMenuItem = new wxMenuItem( HelpMenu, wxID_ANY, wxString( _("Version History") ) , wxEmptyString, wxITEM_NORMAL );
 	HelpMenu->Append( VersionHistoryMenuItem );
 	
 	HelpMenu->AppendSeparator();
-	
-	wxMenuItem* ContactMenuItem;
-	ContactMenuItem = new wxMenuItem( HelpMenu, wxID_ANY, wxString( _("Contact") ) , wxEmptyString, wxITEM_NORMAL );
-	HelpMenu->Append( ContactMenuItem );
 	
 	wxMenuItem* LegalNoticesMenuItem;
 	LegalNoticesMenuItem = new wxMenuItem( HelpMenu, wxID_ANY, wxString( _("Legal Notices") ) , wxEmptyString, wxITEM_NORMAL );
@@ -411,9 +403,7 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	this->Connect( FaqMenuItem->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::OnFaqMenuItemSelected ) );
 	this->Connect( WebsiteMenuItem->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::OnWebsiteMenuItemSelected ) );
 	this->Connect( DownloadsMenuItem->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::OnDownloadsMenuItemSelected ) );
-	this->Connect( NewsMenuItem->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::OnNewsMenuItemSelected ) );
 	this->Connect( VersionHistoryMenuItem->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::OnVersionHistoryMenuItemSelected ) );
-	this->Connect( ContactMenuItem->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::OnContactMenuItemSelected ) );
 	this->Connect( LegalNoticesMenuItem->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::OnLegalNoticesMenuItemSelected ) );
 	this->Connect( AboutMenuItem->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::OnAboutMenuItemSelected ) );
 	SlotListCtrl->Connect( wxEVT_COMMAND_LIST_ITEM_ACTIVATED, wxListEventHandler( MainFrameBase::OnListItemActivated ), NULL, this );

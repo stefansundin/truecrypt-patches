@@ -25,7 +25,7 @@ namespace TrueCrypt
 
 		VersionStaticText->SetLabel (Application::GetName() + L" " + StringConverter::ToWide (Version::String()));
 		CopyrightStaticText->SetLabel (StringConverter::ToWide (TC_STR_RELEASED_BY));
-		WebsiteHyperlink->SetLabel (L"www.truecrypt.org");
+		WebsiteHyperlink->SetLabel (L"website");
 
 		CreditsTextCtrl->SetMinSize (wxSize (
 			Gui->GetCharWidth (CreditsTextCtrl) * 70,
