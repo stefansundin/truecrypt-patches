@@ -828,7 +828,7 @@ namespace TrueCrypt
 		// MIME handler for directory seems to be unavailable through wxWidgets
 		wxString desktop = GetTraits()->GetDesktopEnvironment();
 
-		if (desktop == L"GNOME" || desktop.empty())
+		if (desktop == L"GNOME")
 		{
 			args.push_back ("--no-default-window");
 			args.push_back ("--no-desktop");
@@ -860,6 +860,16 @@ namespace TrueCrypt
 				catch (TimeOut&) { }
 				catch (exception &e) { ShowError (e); }
 			}
+		}
+		else
+		{
+			args.push_back (string (path));
+			try
+			{
+				Process::Execute ("xdg-open", args, 2000);
+			}
+			catch (TimeOut&) { }
+			catch (exception &e) { ShowError (e); }
 		}
 #endif
 	}
