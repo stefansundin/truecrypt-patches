@@ -59,6 +59,8 @@ ifndef DISABLE_PRECOMPILED_HEADERS
 PCH := SystemPrecompiled.h.gch
 endif
 
+LIBS += $(shell pkg-config --libs appindicator-0.1)
+
 RESOURCES :=
 RESOURCES += ../License.txt.h
 RESOURCES += ../Common/Language.xml.h
