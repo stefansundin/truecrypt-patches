@@ -50,6 +50,9 @@ export WXCONFIG_CFLAGS :=
 export WXCONFIG_CXXFLAGS :=
 WX_ROOT ?= ..
 
+CFLAGS += -Wno-sequence-point
+CXXFLAGS += -Wno-narrowing
+PKCS11_INC ?= $(HOME)/pkcs11
 
 export TC_BUILD_CONFIG := Release
 
@@ -278,7 +281,7 @@ all clean:
 
 ifeq "$(MAKECMDGOALS)" "wxbuild"
 CFLAGS :=
-CXXFLAGS :=
+CXXFLAGS := -w
 LFLAGS :=
 endif
 

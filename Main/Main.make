@@ -76,7 +76,7 @@ CXXFLAGS += -I$(BASE_DIR)/Main
 #------ wxWidgets configuration ------
 
 ifdef TC_NO_GUI
-WX_CONFIG_LIBS := base
+WX_CONFIG_LIBS := core,base
 else
 WX_CONFIG_LIBS := adv,core,base
 endif
@@ -105,7 +105,7 @@ TC_VERSION = $(shell grep VERSION_STRING ../Common/Tcdefs.h | head -n 1 | cut -d
 
 $(APPNAME): $(LIBS) $(OBJS)
 	@echo Linking $@
-	$(CXX) -o $(APPNAME) $(LFLAGS) $(OBJS) $(LIBS) $(FUSE_LIBS) $(WX_LIBS)
+	$(CXX) -o $(APPNAME) $(LFLAGS) $(OBJS) $(LIBS) $(FUSE_LIBS) $(WX_LIBS) $(TC_EXTRA_LIBS)
 
 ifeq "$(TC_BUILD_CONFIG)" "Release"
 ifndef NOSTRIP
