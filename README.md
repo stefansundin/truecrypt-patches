@@ -4,6 +4,11 @@ There is a different branch for each patch. Most patches branch of from `7.1a`, 
 
 It is easy to use git to create the patches which can then be used in the debianization:
 ```
+for branch in 7.1a build-fixes indicator gcc5 helpfix open-doc update-urls xdg-open
+do
+  git branch --track $branch origin/$branch
+done
+
 git diff --ignore-space-at-eol 7.1a..build-fixes > ../truecrypt-7.1a-build-fixes.patch
 git diff --ignore-space-at-eol build-fixes..indicator > ../truecrypt-7.1a-indicator.patch
 git diff --ignore-space-at-eol 7.1a..gcc5 > ../truecrypt-7.1a-gcc5.patch
