@@ -15,7 +15,9 @@
 #define TC_APP_NAME						"TrueCrypt"
 
 // Version displayed to user 
+#ifndef VERSION_STRING
 #define VERSION_STRING					"7.1a"
+#endif
 
 // Version number to compare against driver
 #define VERSION_NUM						0x071a
@@ -247,7 +249,9 @@ void EraseMemory (void *memory, int size);
 #define TC_MAX_PATH		260	/* Includes the null terminator */
 #endif
 
+#ifndef TC_STR_RELEASED_BY
 #define TC_STR_RELEASED_BY "Released by TrueCrypt Foundation on " TC_STR_RELEASE_DATE
+#endif
 
 #define MAX_URL_LENGTH	2084 /* Internet Explorer limit. Includes the terminating null character. */
 
