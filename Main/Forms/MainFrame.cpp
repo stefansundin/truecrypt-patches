@@ -263,7 +263,7 @@ namespace TrueCrypt
 		colPermilles.push_back (75);
 #else
 		SlotListCtrl->InsertColumn (ColumnSlot, _("Slot"), wxLIST_FORMAT_LEFT, 1);
-		colPermilles.push_back (82);
+		colPermilles.push_back (87);
 #endif
 
 		SlotListCtrl->InsertColumn (ColumnPath, LangString["VOLUME"], wxLIST_FORMAT_LEFT, 1);
