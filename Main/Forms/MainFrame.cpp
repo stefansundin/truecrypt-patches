@@ -828,7 +828,7 @@ namespace TrueCrypt
 			// File-hosted volumes
 			if (!volume->Path.IsDevice() && !mountPoint.IsEmpty())
 			{
-				if (wxString (volume->Path).Upper().StartsWith (wstring (mountPoint).c_str()))
+				if (wxString (wstring(volume->Path)).Upper().StartsWith (wxString (wstring(mountPoint))))
 				{
 					removedVolumes.push_back (volume);
 					continue;
@@ -1020,7 +1020,7 @@ namespace TrueCrypt
 		if (!ListItemRightClickEventPending)
 		{
 			ListItemRightClickEventPending = true;
-			SlotListCtrl->AddPendingEvent (event);
+			SlotListCtrl->GetEventHandler()->AddPendingEvent (event);
 			return;
 		}
 
