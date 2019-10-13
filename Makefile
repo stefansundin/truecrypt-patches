@@ -51,7 +51,7 @@ export WXCONFIG_CXXFLAGS :=
 WX_ROOT ?= ..
 
 CFLAGS += -Wno-sequence-point
-CXXFLAGS += -Wno-narrowing
+CXXFLAGS += -Wno-narrowing -Wno-deprecated-declarations
 PKCS11_INC ?= $(HOME)/pkcs11
 
 export TC_BUILD_CONFIG := Release
