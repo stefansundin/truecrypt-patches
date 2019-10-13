@@ -281,7 +281,7 @@ all clean:
 
 ifeq "$(MAKECMDGOALS)" "wxbuild"
 CFLAGS :=
-CXXFLAGS := -w
+CXXFLAGS :=
 LFLAGS :=
 endif
 
