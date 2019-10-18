@@ -20,3 +20,16 @@ git diff 7.1a..update-urls > ../truecrypt-7.1a-update-urls.patch
 git diff 7.1a..wxWidgets > ../truecrypt-7.1a-wxWidgets.patch
 git diff 7.1a..mac > ../truecrypt-7.1a-mac.patch
 ```
+
+Web diffs:
+- [7.1a..build-fixes](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..build-fixes)
+- [7.1a..gcc5](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..gcc5)
+- [build-fixes..gcc6](https://github.com/stefansundin/truecrypt-patches/compare/build-fixes..gcc6)
+- [7.1a..gui-fixes](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..gui-fixes)
+- [build-fixes..indicator](https://github.com/stefansundin/truecrypt-patches/compare/build-fixes..indicator)
+- [7.1a..helpfix](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..helpfix)
+- [7.1a..xdg-open](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..xdg-open)
+- [7.1a..open-doc](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..open-doc)
+- [7.1a..update-urls](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..update-urls)
+- [7.1a..wxWidgets](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..wxWidgets)
+- [7.1a..mac](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..mac)
