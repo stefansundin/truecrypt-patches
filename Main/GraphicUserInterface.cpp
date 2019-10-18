@@ -547,7 +547,7 @@ namespace TrueCrypt
 	void GraphicUserInterface::InsertToListCtrl (wxListCtrl *listCtrl, long itemIndex, const vector <wstring> &itemFields, int imageIndex, void *itemDataPtr) const
 	{
 		wxListItem item;
-		item.SetData (itemDataPtr);
+		item.SetData ((intptr_t) itemDataPtr);
 		item.SetId (itemIndex);
 		item.SetImage (imageIndex);
 		int col = 0;
