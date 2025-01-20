@@ -2,7 +2,9 @@ I use this repository to manage my patches for [truecrypt.deb](https://github.co
 
 There is a different branch for each patch. It is easy to use git to create the patches which can then be used in the debianization.
 
-```
+```shell
+git config --local diff.noprefix false
+
 for branch in 7.1a build-fixes gcc5 gcc6 wxWidgets indicator helpfix xdg-open open-doc update-urls mac
 do
   git branch --track $branch origin/$branch
