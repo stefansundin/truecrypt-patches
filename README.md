@@ -19,6 +19,7 @@ git diff 7.1a..helpfix > ../truecrypt-7.1a-helpfix.patch
 git diff 7.1a..xdg-open > ../truecrypt-7.1a-xdg-open.patch
 git diff 7.1a..open-doc > ../truecrypt-7.1a-open-doc.patch
 git diff 7.1a..update-urls > ../truecrypt-7.1a-update-urls.patch
+git diff 7.1a..losetup > ../truecrypt-7.1a-losetup.patch
 git diff 7.1a..appimage > ../truecrypt-7.1a-appimage.patch
 git diff 7.1a..mac > ../truecrypt-7.1a-mac.patch
 ```
@@ -33,5 +34,6 @@ Web diffs:
 - [7.1a..xdg-open](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..xdg-open)
 - [7.1a..open-doc](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..open-doc)
 - [7.1a..update-urls](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..update-urls)
+- [7.1a..losetup](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..losetup)
 - [7.1a..appimage](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..appimage)
 - [7.1a..mac](https://github.com/stefansundin/truecrypt-patches/compare/7.1a..mac)
