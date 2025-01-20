@@ -359,6 +359,11 @@ namespace TrueCrypt
 					if (appPath.empty())
 						appPath = "truecrypt";
 
+					// https://github.com/AppImage/AppImageKit/issues/146
+					const char *appimage = getenv ("APPIMAGE");
+					if (appimage)
+						appPath = string(appimage);
+
 					const char *args[] = { "sudo", "-S", "-p", "", appPath.c_str(), TC_CORE_SERVICE_CMDLINE_OPTION, nullptr };
 					execvp (args[0], ((char* const*) args));
 					throw SystemException (SRC_POS, args[0]);
